@@ -17,10 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myweb import views
+from django.conf.urls import url
+
 urlpatterns = [
     path('', views.index),
     path('polls/', include('polls.urls')),
     path('myweb/', include('myweb.urls')),
+    path('Login', views.Login),
+    path('Register', views.Register),
     path('united', views.united),
+    path('Travel', views.Travel),
+    path('Contact', views.Contact),
+    path('Indexforuser', views.Indexforuser),
+    path('Contactforuser', views.Contactforuser),
+    path('Travelforuser', views.Travelforuser),
+    #path('Contact', views.Contact),
     path('admin/', admin.site.urls),
 ]
