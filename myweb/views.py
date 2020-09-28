@@ -11,15 +11,17 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 from django.http import Http404
+from .models import inputtravel
+
 
 # Create your views here.
 def index(req):
 	return render(req, 'myweb/index.html')
 
 def Travel(req):
-    #Travels = importplace.objects.all()
-	#return render(req, 'myweb/Travel.html', { 'Travels': Travels })
-	return render(req, 'myweb/Travel.html')
+    inputtravels = inputtravel.objects.all()
+    return render(req, 'myweb/Travel.html', {'inputtravels': inputtravels})
+	#return render(req, 'myweb/Travel.html')
 
 def united(req):
 	return render(req, 'myweb/united.html')
@@ -40,8 +42,8 @@ def Contactforuser(req):
     return render(req, 'myweb/Contactforuser.html')
 
 def Travelforuser(req):
-
-    return render(req, 'myweb/Travelforuser.html')
+    inputtravels = inputtravel.objects.all()
+    return render(req, 'myweb/Travelforuser.html', {'inputtravels': inputtravels})
 
 def detail(request, question_id):
     question = Question.objects.get(id=question_id)

@@ -50,16 +50,14 @@ class Person(models.Model):
 
 #################################################################################################################
 
-class importplace(models.Model):
-    urlimg = models.CharField(max_length=200) #url รูป
-    nameimg = models.CharField(max_length=200)  #ชื่อ
-    detail = models.CharField(max_length=20000)  #เนื้อหา
-    rating = models.IntegerField(default=0, max_length=10) #ระดับ
+class inputtravel(models.Model):
+    img = models.CharField(max_length=200)
+    nameplace = models.CharField(max_length=200)
+    namewrite = models.CharField(max_length=200)
+    detail = models.CharField(max_length=1000)
+    rating = models.IntegerField(default=0, max_length=10)
     def __str__(self):
-        #return f'{self.type_n.people_text} - {self.name} - {self.career} - {self.age} age.'
-        return f'{self.urlimg} - {self.nameimg} - {self.detail} - {self.rating}'
-
-#################################################################################################################
+        return f'{self.img} - {self.nameplace} - {self.namewrite} - {self.detail} - {self.rating}'
 
 
 
