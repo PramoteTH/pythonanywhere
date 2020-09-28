@@ -17,6 +17,8 @@ def index(req):
 	return render(req, 'myweb/index.html')
 
 def Travel(req):
+    #Travels = importplace.objects.all()
+	#return render(req, 'myweb/Travel.html', { 'Travels': Travels })
 	return render(req, 'myweb/Travel.html')
 
 def united(req):
@@ -38,6 +40,7 @@ def Contactforuser(req):
     return render(req, 'myweb/Contactforuser.html')
 
 def Travelforuser(req):
+
     return render(req, 'myweb/Travelforuser.html')
 
 def detail(request, question_id):
