@@ -23,6 +23,8 @@ def Travel(req):
     return render(req, 'myweb/Travel.html', {'inputtravels': inputtravels})
 	#return render(req, 'myweb/Travel.html')
 
+
+
 def united(req):
 	return render(req, 'myweb/united.html')
 
