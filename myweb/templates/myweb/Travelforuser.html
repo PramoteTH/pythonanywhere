@@ -22,15 +22,14 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block">
     <a href="/Indexforuser" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-    <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Logout</a>
     <a href="/Travelforuser" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Travel</a>
     <a href="/Contactforuser" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
     <br>
     <br>
     <br>
     <br>
-
     <h3> Welcome  {{user.username}} </h3>
+    <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Logout</a>
   </div>
 </nav>
 
@@ -52,9 +51,10 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>เว็บไซด์แนะนำสถานที่ท่องเที่ยวในไทย</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
+
  {% for a in inputtravels %}
     <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Circle-icons-profile.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <img src="http://www.aya1.go.th/gif1/home.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">Recommend</span>
         <h4>{{ a.nameplace }}</h4><br>
         <hr class="w3-clear">
@@ -65,7 +65,7 @@ body {font-size:16px;}
         </div>
 {% endfor %}
 <br>
-<a href="/admin" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">สำหรับผู้พัฒนาเว็บ<
+<a href="/admin" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>สำหรับ Admin</a>
 
 
 

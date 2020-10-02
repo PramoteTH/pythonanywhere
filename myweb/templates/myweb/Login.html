@@ -24,7 +24,7 @@ body {font-size:16px;}
     <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
     <a href="/Login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Login</a>
     <a href="/Register" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Register</a>
-    <a href="/Travel" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Travel</a>
+    <!-- <a href="/Travel" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Travel</a> -->
     <a href="/Contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
   </div>
 </nav>
@@ -48,7 +48,7 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid indigo" class="w3-round">
   </div>
 
-  {% block title %}Login{% endblock %}
+  {% block title %}<h3>Login</h3>{% endblock %}
   <!-- Main Content -->
   {% block content %}
   <div class="container">
@@ -61,8 +61,7 @@ body {font-size:16px;}
               {{ form.as_p }}
                 <button style="background-color:#6202e5; color:white" class="btn btn-outline-info" type="submit">Sign in</button>
             </form>
-
-            You already have a P M P account. ? <a href="/Register" target="blank">Register here!</strong></a>!
+            <br>You already have a P M P account. ? <a href="/Register" target="blank">Register here!</strong></a>!
         </div>
       </div>
     </div>
