@@ -12,6 +12,8 @@ from django.views import generic
 from django.utils import timezone
 from django.http import Http404
 from .models import inputtravel
+from .forms import inputtravelform
+
 
 
 # Create your views here.
@@ -42,6 +44,13 @@ def Indexforuser(req):
 
 def Contactforuser(req):
     return render(req, 'myweb/Contactforuser.html')
+
+def Upload(req):
+    inputtravels = inputtravel.objects.all()
+    ins = {
+        'inputtravels' : inputtravels
+        }
+    return render(req, 'myweb/Upload.html', ins)
 
 def Travelforuser(req):
     inputtravels = inputtravel.objects.all()
@@ -105,3 +114,16 @@ def logout(req):
     logout(req)
     messages.info(req, "Logged out successfully!")
     return redirect("/Indexforuser")
+
+def Upload(request):
+    if request.method == 'POST':
+        form = inputtravelform(request.POST)
+
+        if form.is_valid():
+            a = form.save()
+            a.save()
+            return redirect("/Travelforuser")
+    else:
+        form = inputtravelform()
+        context = {'form': form}
+        return render(request, 'myweb/Upload.html', context)

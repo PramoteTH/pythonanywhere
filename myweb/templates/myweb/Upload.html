@@ -52,25 +52,36 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
 
-      <div class="w3-container w3-card w3-white">
+   <h3> เพิ่มสถานที่ท่องเที่ยว </h3>
 
-   <div class="w3-xlarge">
-    <h5>Personal history</h5>
-    <ul class="w3-ul w3-card-4 w3-white">
-      <li class="w3-padding-16">
-        <img src="https://i.pinimg.com/564x/4f/6e/cc/4f6ecc0091be306bc51e4c0c554ee6e4.jpg" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">FB: Tor pramote</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="https://www.pinclipart.com/picdir/big/527-5270982_instagram-icon-ig-icon-instagram-logo-png-transparent.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">IG: _tor4</span><br>
-      </li>
+    {% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" />
+    </form>
+    {% endblock %}
+<br>
+<p><B> คำแนะนำ</p></B>
+<p> img : ลิ้ง url ของรูป</p>
+<p> Nameplace : ชื่อสถานที่ท่องเที่ยว</p>
+<p> namewrite : ชื่อผู้เขียน</p>
+<p> Detail : รายละเอียดโดยคราวๆ</p>
+<p> rating : ระดับความน่าเที่ยว เต็ม 10</p>
+<br>
+<a href="/admin" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>สำหรับ Admin</a>
 
-    </ul>
-    <br>
-  </div>
-      </div>
 
+
+
+
+
+
+
+
+
+<!-- End page content -->
+</div>
 
 <!-- W3.CSS Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by TETHXeRuS<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"TETHXeRuS</a></p></div>

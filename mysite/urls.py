@@ -31,6 +31,7 @@ urlpatterns = [
     path('Indexforuser', views.Indexforuser),
     path('Contactforuser', views.Contactforuser),
     path('Travelforuser', views.Travelforuser),
+    path('Upload', views.Upload),
     #path('Contact', views.Contact),
     path('admin/', admin.site.urls),
 ]

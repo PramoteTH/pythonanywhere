@@ -1,7 +1,8 @@
-
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import inputtravel
+from django.forms import ModelForm
 
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -17,4 +18,9 @@ class NewUserForm(UserCreationForm):
             user.save()
         return user
 
+
+class inputtravelform(ModelForm):
+    class Meta:
+        model = inputtravel
+        fields = ['img','nameplace','namewrite','detail','rating']
 
